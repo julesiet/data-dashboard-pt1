@@ -3,7 +3,6 @@ import "../CardInfo.css"
 const API_KEY = import.meta.env.VITE_SPOONACULAR_KEY
 
 const CardInfo = ( {image, id, title} ) => {
-    const [foodInfo, setFoodInfo] = useState(null);
     const [calories, setCalories] = useState(0);
     const [proteinDV, setProteinDV] = useState(0);
     const [carbsDV, setCarbsDV] = useState(0);
@@ -28,10 +27,10 @@ const CardInfo = ( {image, id, title} ) => {
         <div className="card-cntr">
             <img src={image} width={200} height={150}></img>
             <h4> {title} </h4>
-            <p> Calories: {calories} </p>
-            <p> <span className="percentages"> {proteinDV}% </span> DV of protein!</p>
-            <p> <span className="percentages"> {carbsDV}% </span> DV of carbs! </p>
-            <p> <span className="percentages"> {fatDV}% </span> DV of fat! </p>
+            <p className="card-details"> Calories: {calories} </p>
+            <p className="card-details"> <span className="percentages"> {proteinDV}% </span> DV of protein!</p>
+            <p className="card-details"> <span className="percentages"> {carbsDV}% </span> DV of carbs! </p>
+            <p className="card-details"> <span className="percentages"> {fatDV}% </span> DV of fat! </p>
         </div>
     )
 }
