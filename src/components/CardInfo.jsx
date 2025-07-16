@@ -27,10 +27,10 @@ const CardInfo = ( {image, id, title} ) => {
         <div className="card-cntr">
             <img src={image} width={200} height={150}></img>
             <h4> {title} </h4>
-            <p className="card-details"> Calories: {calories} </p>
-            <p className="card-details"> <span className="percentages"> {proteinDV}% </span> DV of protein!</p>
-            <p className="card-details"> <span className="percentages"> {carbsDV}% </span> DV of carbs! </p>
-            <p className="card-details"> <span className="percentages"> {fatDV}% </span> DV of fat! </p>
+            <p className="card-details"> <strong>{calories}</strong> kCal </p>
+            <p className="card-details"> <span className="percentages"> {proteinDV}% </span> DV of <em>protein!</em></p>
+            <p className="card-details"> <span className="percentages"> {carbsDV}% </span> DV of <em>carbs!</em> </p>
+            <p className="card-details"> <span className="percentages"> {fatDV}% </span> DV of <em>fat!</em> </p>
         </div>
     )
 }
